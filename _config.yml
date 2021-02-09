@@ -44,6 +44,7 @@ flavor: "FIXME"
 # Most workshops don't use extra pages. More information about extra
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
+# Can leave as "Training Workshop" if you don't want it displayed
 title: "Training Workshop"
 
 

@@ -9,6 +9,7 @@ _site
 .Rproj.user
 .Rhistory
 .RData
+.idea/
 .bundle/
 .vendor/
 vendor/
