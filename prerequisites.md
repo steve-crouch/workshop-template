@@ -16,7 +16,7 @@ There is no time during the workshop to deal with installation problems, so you 
 We've set aside the above date to provide help with installing software. Our Research Software Engineers will be online
 from 9.00am - 5.00pm to help with your installation.
 
-The installation is fairly straightforward, but if you have any problems, let us know via FIXME:ADD-TEAMS-CHANNEL-LINK.
+The installation is fairly straightforward, but if you have any problems, let us know via the {{ site.comms_channel_link }}
 or by [emailing us](mailto:rsg-info@soton.ac.uk). We'll arrange a Teams call with you to talk you through the process.
 
 

@@ -18,7 +18,7 @@ helper: ["Jimmy Gill", "Saul Goodman"]     # boxed, comma-separated list of help
 email: ["rsg@info.soton.ac.uk","a.n.email@email.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 preworkshop_survey: "http://bit.ly/2020-5-21-before" # optional: URL for the workshop survey, usually a pre-generated bitlink to a Google Form created for the workshop from a template
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite:          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %}
@@ -30,17 +30,16 @@ double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
+<!--------------- Eventbrite -------------------------------------------------->
 {% comment %}
-EVENTBRITE
-
 This block includes the Eventbrite registration widget if
 'eventbrite' has been set in the header.  You can delete it if you
 are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
 {% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
+**Some adblockers block the registration window. If you do not see the
+registration box below, please check your adblocker settings.**
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
   frameborder="0"
@@ -51,18 +50,17 @@ displayed if the 'eventbrite' field in the header is not set.
 {% endif %}
 
 
-<h2 id="general">General Information</h2>
+<!--------------- General Workshop Information -------------------------------------------------->
 
+## General Information
 {% comment %}
-INTRODUCTION
-
 Edit the general explanatory paragraph below if you want to change
-the pitch.
+the pitch (see the _includes directory).
 {% endcomment %}
 {% if site.carpentry == "crs" %}
 {% include crs/intro.md %}
 {% elsif site.carpentry == "swc" %}
-{% include swc/intro.html %}
+{% include swc/intro.md %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
@@ -70,15 +68,14 @@ the pitch.
 {% endif %}
 
 {% comment %}
-AUDIENCE
-
 Explain who your audience is.  (In particular, tell readers if the
 workshop is only open to people from a particular institution.
+Again, see see the _includes directory.
 {% endcomment %}
 {% if site.carpentry == "crs" %}
   {% include crs/who.md %}
 {% elsif site.carpentry == "swc" %}
-  {% include swc/who.html %}
+  {% include swc/who.md %}
 {% elsif site.carpentry == "dc" %}
   {% include dc/who.html %}
 {% elsif site.carpentry == "lc" %}

@@ -15,7 +15,7 @@
 #  https://github.com/carpentries/workshop-template
 # and for instructor training events you should use:
 #  https://github.com/carpentries/training-template
-carpentry: "crs"
+carpentry: "swc"
 
 # This option is currently only needed for
 # Data Carpentry and Software Carpentry workshops.
@@ -47,6 +47,11 @@ flavor: "FIXME"
 # Can leave as "Training Workshop" if you don't want it displayed
 title: "Training Workshop"
 
+# If this is an online workshop that uses a communications software channel
+# or group, like Microsoft Teams or Slack, specify the channel or group here
+# as a full Markdown link, e.g.
+# "[Teams group](https://teams.microsoft.com/l/channel/19%3a68e3a937446d4ac1a2e499f18ffddccd%40thread.tacv2/Data%2520Management%2520Module?groupId=e9cf73f0-713a-4d5e-b62b-4c141212a8b6&tenantId=4a5378f9-29f4-4d3e-be89-669d03ada9d8)"
+comms_channel_link: "[Teams group](https://teams.microsoft.com/l/channel/19%3a68e3a937446d4ac1a2e499f18ffddccd%40thread.tacv2/Data%2520Management%2520Module?groupId=e9cf73f0-713a-4d5e-b62b-4c141212a8b6&tenantId=4a5378f9-29f4-4d3e-be89-669d03ada9d8)"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
