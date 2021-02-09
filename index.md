@@ -127,7 +127,8 @@ the instructor will pass it on to you before the workshop.
 
 <!--------------- Requirements ------------------------------------------------>
 
-**Requirements:** Before attending the workshop you need to install some useful and free software. For more information, see the [software prerequisites](prerequisites.html).
+**Requirements:** Before attending the workshop you need to install some useful and free software.
+For more information, see the [software prerequisites](prerequisites.html).
 
 You must also abide by the Carpentry's [Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
 
@@ -224,15 +225,7 @@ so if this does occur you will be able to work through them after the workshop.
 
 ## Schedule
 
-{% if site.carpentry == "crs" %}
-  {% include crs/schedule.md %}
-{% elsif site.carpentry == "swc" %}
-  {% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-  {% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-  {% include lc/schedule.html %}
-{% endif %}
+Check the [schedule page](schedule.html) for details.
 
 ---
 
@@ -241,5 +234,5 @@ so if this does occur you will be able to work through them after the workshop.
 ## Register an interest in our course for possible future dates
 
 If you're interested in our training, but can't make the date, you can 
-[sign up to be notified](https://docs.google.com/forms/d/1KW8DTErxhEXUJbtbwUfVw7s6AWwHKFNZNWSsALV2E0A/viewform">)
+[sign up to be notified](https://docs.google.com/forms/d/1KW8DTErxhEXUJbtbwUfVw7s6AWwHKFNZNWSsALV2E0A/viewform)
  about future events.
