@@ -16,6 +16,7 @@ enddate: 2021-09-16        # machine-readable end date for the workshop in YYYY-
 instructor: ["Joe Bloggs", "A.N Other"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Jimmy Gill", "Saul Goodman"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["rsg@info.soton.ac.uk","a.n.email@email.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+preworkshop_survey: "http://bit.ly/2020-5-21-before" # optional: URL for the workshop survey, usually a pre-generated bitlink to a Google Form created for the workshop from a template
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -28,8 +29,6 @@ If the value is not 'true', 'false', 'null', or a number, please use
 double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
-
-[Setup](setup.html).
 
 {% comment %}
 Check DC curriculum
@@ -213,6 +212,15 @@ Display the contact email address set in the configuration file.
 {% endcomment %}
 <p id="contact">
   <strong>Contact:</strong>
+  This workshop is being organised by the University of Southampton's <a href='http://rsg.soton.ac.uk/'>Research Software Group</a>.
+
+  Our talented team of Research Software Engineers is dedicated to ensuring that software developed for research at the University of Southampton is the best it can be.
+  <ul>
+    <li>We offer a full range of Software Development Services, covering many different technologies and all academic disciplines.</li>
+    <li>We provide Software Carpentry Training in good software engineering practice, for postgraduate students and researchers at any career stage.</li>
+    <li>We organise regular Research Software Community events for researchers who develop software.</li>
+  </ul>
+
   Please email
   {% if page.email %}
   {% for email in page.email %}
@@ -230,33 +238,6 @@ Display the contact email address set in the configuration file.
   {% endif %}
   for more information.
 </p>
-
-<p id="roles">
-  <strong>Roles:</strong>
-  To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
-</p>
-
-{% comment %}
-WHO CAN ATTEND?
-
-If you would like to specify who can attend the workshop,
-you can use the section below.
-
-Move the 'endcomment' tag above the beginning of the following
-<p> tag to make this section visible.
-
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
-
-<p id="who-can-attend">
-    <strong>Who can attend?:</strong>
-    This workshop is open to ....
-</p>
-{% endcomment %}
 
 <hr/>
 
@@ -301,15 +282,31 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 
 
 {% comment %}
-SURVEYS - DO NOT EDIT SURVEY LINKS
+BEFORE THE WORKSHOP
 {% endcomment %}
-<h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+<h2 id="surveys">Before the workshop</h2>
+<p>Before attending the workshop you need to install some useful and free software. 
+For more information, see the <a href="prerequisites.html">software prerequisites</a>.</p>
+
+{% if page.preworkshop_survey %}
+<p>Please also fill in the <a href="{{page.preworkshop_surve }}">Pre-workshop Survey</a>.</p>
+{% endif %}
 
 <hr/>
 
+{% comment %}
+DURING THE WORKSHOP
+{% endcomment %}
+<h2 id="surveys">During the Workshop</h2>
+<p>We will attempt to fix any technical issues people encounter during the workshop. 
+If you encounter an issue, please copy the error message you encounter and send it as a direct message to the presenter.</p>
+
+<p>Some problems may be too complicated to solve during the online event. 
+If that's the case, we will attempt to resolve the issue after the workshop. 
+All training materials are available online through the schedule, 
+so if this does occur you will be able to work through them after the workshop.</p>
+
+<hr/>
 
 {% comment %}
 SCHEDULE
@@ -342,3 +339,16 @@ of code below the Schedule `<h2>` header below with
 {% elsif site.carpentry == "lc" %}
 {% include lc/schedule.html %}
 {% endif %}
+
+<hr/>
+
+<h2>Register an interest in our course for possible future dates</h2>
+
+<p>If you're interested in our training, but can't make the date, you can 
+<a href="https://docs.google.com/forms/d/1KW8DTErxhEXUJbtbwUfVw7s6AWwHKFNZNWSsALV2E0A/viewform">sign up to be notified</a> about future events.</p>
+
+## Register an interest in our course for possible future dates
+
+If you're interested in our training, but can't make the date, you can 
+[sign up to be notified](https://docs.google.com/forms/d/1KW8DTErxhEXUJbtbwUfVw7s6AWwHKFNZNWSsALV2E0A/viewform">)
+ about future events.
