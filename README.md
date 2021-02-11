@@ -75,12 +75,17 @@ There are two ways of customizing your website. You can either:
     Editing hints are embedded in `_config.yml`,
     and full instructions are in [the customization instructions][customization].
 
-5.  Edit the `schedule.md` file to edit the schedule for your upcoming workshop, and possibly the
-    `who.md` file which describes who should attend, and the `intro.md` file if you need to change
-    the introductory paragraph. These files are
-    located in the `_includes` directory, make sure to choose the one from the appropriate `dc` (Data
-    Carpentry workshop), `crs` (Computational Research Skills), or `swc`
-    (Software Carpentry) subdirectory.
+5.  Edit the following files to match the needs of your workshop:
+
+    - `schedule.md` -  schedule for your upcoming workshop
+    - `who.md` - describes who should attend
+    - `intro.md` - introductory paragraph describing the workshop
+
+    These files are located in the `_includes` directory, make sure to choose the one from the appropriate `dc` (Data
+    Carpentry workshop), `crs` (Computational Research Skills), or `swc` (Software Carpentry) subdirectory.
+
+6.  Edit the `prerequisites.md` file, ensuring the instructions to install software appropriate for your
+    workshop are uncommented.
 
 ### Working locally
 
