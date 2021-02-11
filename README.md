@@ -2,7 +2,8 @@
 
 This repository is the Research Software Group's template for creating websites for workshops.
 
-It is based on the The Carpentries' [Workshop Template][carp-workshop-template].
+It is derived from The Carpentries' [Workshop Template][carp-workshop-template], which is
+Copyright © [Software Carpentry](http://software-carpentry.org).
 
 1. **Please _do not fork this repository directly on GitHub._** Instead, please use GitHub's
    "template" function following [the instructions below](#creating-a-repository) to copy this
