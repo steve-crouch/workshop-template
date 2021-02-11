@@ -6,7 +6,7 @@
 # https://carpentries.github.io/workshop-template/customization/index.html
 
 # Which carpentry is this ("swc", "dc", "lc", or "cp")?
-# crs: Soton's bespoke training
+# crs: Soton's bespoke training (default)
 # swc: Software Carpentry
 #  dc: Data Carpentry
 #  lc: Library Carpentry
@@ -15,7 +15,7 @@
 #  https://github.com/carpentries/workshop-template
 # and for instructor training events you should use:
 #  https://github.com/carpentries/training-template
-carpentry: "swc"
+carpentry: "crs"
 
 # This option is currently only needed for
 # Data Carpentry and Software Carpentry workshops.

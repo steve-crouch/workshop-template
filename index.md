@@ -52,33 +52,20 @@ registration box below, please check your adblocker settings.**
 
 ## General Information
 {% comment %}
-Edit the general explanatory paragraph below if you want to change
-the pitch (see the _includes directory).
+Load the intro paragraph based on a template specified in site 'carpentry' variable in _config.yml.
+Loaded from _includes/{{ site.carpentry }}/intro.md
 {% endcomment %}
-{% if site.carpentry == "crs" %}
-{% include crs/intro.md %}
-{% elsif site.carpentry == "swc" %}
-{% include swc/intro.md %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% endif %}
+
+{% include {{ site.carpentry }}/intro.md %}
+
 
 {% comment %}
 Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-Again, see see the _includes directory.
+workshop is only open to people from a particular institution.)
+Again, loaded from the _includes/{{ site.carpentry }} directory.
 {% endcomment %}
-{% if site.carpentry == "crs" %}
-  {% include crs/who.md %}
-{% elsif site.carpentry == "swc" %}
-  {% include swc/who.md %}
-{% elsif site.carpentry == "dc" %}
-  {% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-  {% include lc/who.html %}
-{% endif %}
+
+{% include {{ site.carpentry }}/who.md %}
 
 
 <!--------------- Location ---------------------------------------------------->
