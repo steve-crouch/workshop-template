@@ -30,55 +30,44 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% endcomment %}
 
 
-<!--------------- Eventbrite -------------------------------------------------->
-{% comment %}
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.
-{% endcomment %}
-{% if page.eventbrite %}
-**Some adblockers block the registration window. If you do not see the
-registration box below, please check your adblocker settings.**
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-
 <!--------------- General Workshop Information -------------------------------------------------->
 
 ## General Information
-{% comment %}
-Edit the general explanatory paragraph below if you want to change
-the pitch (see the _includes directory).
-{% endcomment %}
-{% if site.carpentry == "crs" %}
-{% include crs/intro.md %}
-{% elsif site.carpentry == "swc" %}
-{% include swc/intro.md %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% endif %}
 
-{% comment %}
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-Again, see see the _includes directory.
-{% endcomment %}
-{% if site.carpentry == "crs" %}
-  {% include crs/who.md %}
-{% elsif site.carpentry == "swc" %}
-  {% include swc/who.md %}
-{% elsif site.carpentry == "dc" %}
-  {% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-  {% include lc/who.html %}
-{% endif %}
+[Software Carpentry](http://software-carpentry.org/)'s mission is to help scientists and engineers get 
+more research done in less time and with less pain by teaching them basic skills for scientific computing. 
+This hands-on workshop will cover basic concepts and tools, including using the command-line, building and 
+designing programs in Python, and managing the development of code with version control in Git. 
+Participants will be encouraged to help one another.
+
+*For more information on what we teach and why, please see our paper 
+["Best Practices for Scientific Computing"](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745).*
+
+**Who:** The course is aimed at postgraduate students and postdoctoral scientists who are familiar with basic programming concepts (like loops and arrays) and would like to learn best practise techniques and tools to develop their software more effectively and productively.
+
+<!-- Uncomment for Data Carpentry-style workshop
+
+[Data Carpentry](https://www.data-carpentry.org/) develops and teaches workshops on the fundamental data skills needed to conduct research. 
+Our mission is to provide researchers high-quality, training covering the full lifecycle of data-driven research. 
+Data Carpentry is a sibling organization of Software Carpentry. Where Software Carpentry teaches best practices in software development, our focus is on the introductory computational skills needed for data management and analysis in all domains of research. Our initial target audience is learners who have little to no prior computational experience. We create a friendly environment for learning to empower researchers and enable data driven discovery. Participants will be encouraged to help one another and to apply what they have learned to their own research problems.
+
+*For more information on what we teach and why, please see our paper 
+["Best Practices for Scientific Computing"](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745).*
+
+The course is aimed at graduate students and other researchers.
+You don't need to have any previous knowledge of the tools that will be presented at the workshop.
+-->
+
+<!-- Uncomment for Computational Research Skills-style workshop
+
+The Computational Research Skills training course helps researchers get more done, in less time, and with less pain!
+It teaches the fundamental data and software skills needed for research.
+
+Delivered online, this hands-on, self-learning workshop will cover basic concepts and tools, including data organisation and management, using the command line, 
+building and designing R programs to analyse, manipulate, and visualise data, as well as providing introductions to version control and cloud computing.
+
+**Who:** The course is aimed at postgraduate students who are familiar with basic programming concepts (like loops and arrays).
+-->
 
 
 <!--------------- Location ---------------------------------------------------->
@@ -163,20 +152,16 @@ researchers at any career stage.
 <!-- Set within p element to remove whitespace and linespacing -->
 <p>
 Please email
-{% if page.email %}
-  {% for email in page.email %}
-    {% if forloop.last and page.email.size > 1 %}
-      or
-    {% else %}
-      {% unless forloop.first %}
-        ,
-      {% endunless %}
-    {% endif %}
-    <a href='mailto:{{email}}'>{{email}}</a>
-  {% endfor %}
-{% else %}
-  to-be-announced
-{% endif %}
+{% for email in page.email %}
+  {% if forloop.last and page.email.size > 1 %}
+    or
+  {% else %}
+    {% unless forloop.first %}
+      ,
+    {% endunless %}
+  {% endif %}
+  <a href='mailto:{{email}}'>{{email}}</a>
+{% endfor %}
 for more information.
 </p>
 ___
@@ -193,7 +178,7 @@ ___
 
 <!--------------- Before the Workshop ----------------------------------------->
 
-## Before the Workshop
+## Before the workshop
 
 Before attending the workshop you need to install some useful and free software. 
 For more information, see the [software prerequisites](prerequisites.html).
@@ -222,7 +207,7 @@ so if this does occur you will be able to work through them after the workshop.
 
 ## Schedule
 
-Check the [schedule page](schedule.html) for details.
+Check the [schedule page](schedule-text.html) for details.
 
 ---
 
